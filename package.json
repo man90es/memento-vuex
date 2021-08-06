@@ -1,0 +1,19 @@
+{
+	"name": "memento-vuex",
+	"version": "0.1.0",
+	"description": "A minimalist Vuex plugin for persistent data storage",
+	"keywords": ["vue", "vuex", "plugin", "localstorage"],
+	"homepage": "https://github.com/octoman90/memento-vuex",
+	"bugs": {
+		"url": "https://github.com/octoman90/memento-vuex/issues",
+		"email": "man90@tuta.io"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/octoman90/memento-vuex.git"
+	},
+	"main": "index.js",
+	"files": [],
+	"author": "man90 <man90@tuta.io> (https://github.com/octoman90)",
+	"license": "MIT"
+}
