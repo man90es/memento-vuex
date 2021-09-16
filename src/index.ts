@@ -9,10 +9,15 @@ type VuexMutation = {
 	type: string
 }
 
+type VuexStore = {
+	commit: (mutationName: string, data: any) => any
+	subscribe: (handler: (mutation: VuexMutation, state: VuexState) => void) => any
+}
+
 export default function(persistentMutations: { [key: string]: string }, localStorageAttr = defaultLocalStorageAttr, importMutation = defaultImportMutation) {
 	let data: VuexState = {}
 
-	return function(store: any) {
+	return function(store: VuexStore) {
 		// Parse and commit existing data on start
 		const backup = localStorage.getItem(localStorageAttr)
 		if (null !== backup) {
@@ -21,7 +26,7 @@ export default function(persistentMutations: { [key: string]: string }, localSto
 		}
 
 		// Watch and save mutations
-		store.subscribe((mutation: VuexMutation, state: VuexState) => {
+		store.subscribe((mutation, state) => {
 			const mutationType = mutation.type
 
 			if (mutationType in persistentMutations && defaultImportMutation !== mutationType) {
