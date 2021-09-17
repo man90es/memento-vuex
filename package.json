@@ -24,8 +24,7 @@
 		"index.d.ts"
 	],
 	"scripts": {
-		"build": "tsc; uglifyjs index.js -mo index.js",
-		"test": "jest"
+		"build": "tsc; uglifyjs index.js -mo index.js"
 	},
 	"author": "man90 <man90@tuta.io> (https://github.com/octoman90)",
 	"license": "MIT",
