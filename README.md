@@ -4,6 +4,10 @@
 
 A minimalist Vuex plugin for persistent data storage.
 
+> **Warning**
+>
+> This project is not maintained anymore. I recommend using [Pinia](https://github.com/vuejs/pinia) and [pinia-plugin-persistedstate](https://github.com/prazdevs/pinia-plugin-persistedstate) instead.
+
 ## Installation
 
 With Yarn:
